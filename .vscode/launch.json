@@ -1,0 +1,45 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'newtwork'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=newtwork",
+                    "--package=newtwork"
+                ],
+                "filter": {
+                    "name": "newtwork",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'newtwork'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=newtwork",
+                    "--package=newtwork"
+                ],
+                "filter": {
+                    "name": "newtwork",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}
